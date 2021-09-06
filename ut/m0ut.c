@@ -173,6 +173,7 @@ extern struct m0_ut_suite xcode_bufvec_fop_ut;
 extern struct m0_ut_suite xcode_ff2c_ut;
 extern struct m0_ut_suite xcode_ut;
 extern struct m0_ut_suite sns_flock_ut;
+extern struct m0_ut_suite net_sock_ut;
 
 static void tests_add(struct m0_ut_module *m)
 {
@@ -183,6 +184,7 @@ static void tests_add(struct m0_ut_module *m)
 
 	/* sort test suites in alphabetic order */
 	m0_ut_add(m, &libm0_ut, true); /* test lib first */
+	m0_ut_add(m, &net_sock_ut, true);
 	m0_ut_add(m, &addb2_base_ut, true);
 	m0_ut_add(m, &addb2_consumer_ut, true);
 	m0_ut_add(m, &addb2_hist_ut, true);
